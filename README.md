@@ -33,21 +33,21 @@
 
   ## Requirements
 
-    ### Backend:
-      - Java 21 or higher  
-      - PostgreSQL database  
-      - Maven
-      - JavaScript and React with VITE 
-      - IDE or code editor (IntelliJ, Eclipse, etc.)
+  ### Backend:
+    - Java 21 or higher  
+    - PostgreSQL database  
+    - Maven
+    - JavaScript and React with VITE 
+    - IDE or code editor (IntelliJ, Eclipse, etc.)
    
-    ### Frontend:
-      - node 20.18.0
-      - npm 10.8.2
-      - stompJs 7.1.1
-      - sockJs client 1.6.1
-      - react 19.1.0
-      - react-dom 19.1.0
-      - vite 6.3.5
+  ### Frontend:
+    - node 20.18.0
+    - npm 10.8.2
+    - stompJs 7.1.1
+    - sockJs client 1.6.1
+    - react 19.1.0
+    - react-dom 19.1.0
+    - vite 6.3.5
 
   
   ## Features

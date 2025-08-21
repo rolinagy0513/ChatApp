@@ -1,0 +1,459 @@
+/*
+ * @file ContactList.css
+ * @description Styles for the ContactList component
+ */
+
+.add-fiends-button button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.add-fiends-button button:hover {
+    color: #ddd;
+}
+
+.add-fiends-button button:focus {
+    outline: none;
+}
+
+.notification-button button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.notification-button button:hover {
+    color: #ddd;
+}
+
+.notification-button button:focus {
+    outline: none;
+}
+
+.unseen-notification-button button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #bc0d0d;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    animation: pulse-glow 1.5s infinite;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.unseen-notification-button button:hover {
+    color: red;
+    animation-play-state: paused;
+    transform: scale(1.15);
+}
+
+.unseen-notification-button button:focus {
+    outline: none;
+}
+
+.unseen-notification-button button svg {
+    filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.7));
+}
+
+.left-sidebar {
+    width: 300px;
+    background-color: #121212;
+    color: #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #2a2a2a;
+    height: 100vh;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    transition: width 0.3s ease;
+}
+
+.sidebar-header {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #2a2a2a;
+    gap: 8px;
+}
+
+.sidebar-header .user-avatar {
+    flex-shrink: 0;
+    margin-right: 8px;
+}
+
+.current-user {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.current-user .user-userName h2 {
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    font-size: 1rem;
+    width: auto;
+    max-width: 120px;
+}
+
+.add-fiends-button,
+.notification-button {
+    flex-shrink: 0;
+    margin: 0px;
+}
+
+.user-avatar-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    margin-right: 12px;
+}
+
+.user-avatar.placeholder-contact {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2a2a;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.status-dot {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #121212;
+    box-sizing: content-box;
+    z-index: 2;
+}
+
+.status-dot.online {
+    background-color: #4caf50;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.status-dot.offline {
+    background-color: #f44336;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.status-dot.online {
+    animation: pulse 2s infinite;
+}
+
+.user-list {
+    overflow-y: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-item {
+    display: flex;
+    padding: 12px 20px;
+    align-items: center;
+    border-bottom: 1px solid #2a2a2a;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.user-item:hover {
+    background-color: #1a1a1a;
+}
+
+.user-info {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.user-name {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.last-message {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #a0a0a0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-item .last-message p {
+    color: #a0a0a0;
+    font-weight: normal;
+}
+
+.last-message.unseen p {
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+.user-item.selected .last-message p {
+    color: #5a5a5a !important;
+}
+
+.user-item.selected .last-message.unseen p {
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+.user-item.selected {
+    background-color: #ffffff !important;
+    border-left: 4px solid #8a2be2;
+    border-bottom: 2px solid #8a2be2;
+    color: #121212 !important;
+}
+
+.user-item.selected .user-name {
+    color: #121212 !important;
+}
+
+.user-item.selected .last-message p {
+    color: #5a5a5a !important;
+}
+
+.user-item.selected .last-message.unseen p {
+    color: #8a2be2 !important;
+    font-weight: bold !important;
+}
+
+.user-item.selected .user-avatar.placeholder-contact  {
+    background: linear-gradient(45deg, #8a2be2, #9932cc) !important;
+    color: #ffffff !important;
+}
+
+.empty-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.no-users-placeholder {
+    margin-bottom: 20px;
+    color: #888;
+    font-size: 1rem;
+    padding: 0;
+    text-align: center;
+}
+
+.add-friend-button {
+    background: linear-gradient(90deg, #646cff, #af5fff);
+    color: white;
+    border-radius: 10px;
+    border-color: #8a45d9;
+    padding: 12px 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.add-friend-button:hover {
+    background: linear-gradient(90deg, #4a52e0, #8a45d9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.add-friend-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse-glow {
+    0% {
+        transform: scale(1);
+        color: #bc0d0d;
+        text-shadow: 0 0 5px rgba(188, 13, 13, 0.5);
+    }
+    50% {
+        transform: scale(1.2);
+        color: #ff4d4d;
+        text-shadow: 0 0 15px rgba(255, 77, 77, 0.9);
+    }
+    100% {
+        transform: scale(1);
+        color: #bc0d0d;
+        text-shadow: 0 0 5px rgba(188, 13, 13, 0.5);
+    }
+}
+
+/* Responsive Design - Mobile/Tablet breakpoint at 768px */
+@media (max-width: 768px) {
+    .left-sidebar {
+        width: 80px;
+    }
+
+    .sidebar-header {
+        padding: 15px 10px;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    /* Hide username in header */
+    .current-user {
+        display: none;
+    }
+
+    /* Adjust header avatar spacing */
+    .sidebar-header .user-avatar {
+        margin-right: 0;
+    }
+
+    /* Adjust button spacing */
+    .add-fiends-button,
+    .notification-button,
+    .unseen-notification-button {
+        margin: 0 2px;
+    }
+
+    .add-fiends-button button,
+    .notification-button button,
+    .unseen-notification-button button {
+        font-size: 1.25rem;
+    }
+
+    /* User list items */
+    .user-item {
+        padding: 12px 10px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: 80px;
+    }
+
+    /* Hide user name in contact list */
+    .user-name {
+        display: none;
+    }
+
+    /* Adjust avatar container */
+    .user-avatar-container {
+        margin-right: 0;
+        margin-bottom: 4px;
+    }
+
+    /* Adjust user info layout */
+    .user-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Keep last message visible but adjust styling */
+    .last-message {
+        font-size: 0.75rem;
+        text-align: center;
+        max-width: 60px;
+        line-height: 1.2;
+    }
+
+    /* Adjust selected state for mobile */
+    .user-item.selected {
+        border-left: 2px solid #8a2be2;
+        border-bottom: 1px solid #8a2be2;
+    }
+
+    /* Empty state adjustments */
+    .empty-list-container {
+        padding: 10px;
+    }
+
+    .no-users-placeholder {
+        font-size: 0.875rem;
+        margin-bottom: 15px;
+    }
+
+    .no-users-placeholder p {
+        display: none;
+    }
+
+    .add-friend-button {
+        padding: 8px 12px;
+        font-size: 0.875rem;
+    }
+}
+
+/* Even smaller screens - under 480px */
+@media (max-width: 480px) {
+    .left-sidebar {
+        width: 70px;
+    }
+
+    .sidebar-header {
+        padding: 10px 5px;
+    }
+
+    .add-fiends-button button,
+    .notification-button button,
+    .unseen-notification-button button {
+        font-size: 1.1rem;
+    }
+
+    .user-item {
+        padding: 10px 5px;
+        min-height: 70px;
+    }
+
+    .user-avatar-container {
+        width: 35px;
+        height: 35px;
+    }
+
+    .last-message {
+        font-size: 0.7rem;
+        max-width: 50px;
+    }
+
+    .status-dot {
+        width: 8px;
+        height: 8px;
+    }
+}

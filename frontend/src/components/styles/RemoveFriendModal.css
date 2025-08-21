@@ -1,0 +1,72 @@
+/*
+ * @file RemoveFriendModal.css
+ * @description Styles for the RemoveFriendModal component
+ */
+
+.remove-btn {
+    background-color: #dc2626;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+    background-color: #b91c1c;
+}
+
+.remove-btn:focus {
+    outline: 2px solid #f87171;
+    outline-offset: 2px;
+}
+
+.decline-btn {
+    background-color: #d1d5db;
+    color: #1f2937;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.decline-btn:hover {
+    background-color: #9ca3af;
+}
+
+.decline-btn:focus {
+    outline: 2px solid #cbd5e1;
+    outline-offset: 2px;
+}
+
+.confirmation-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+}
+
+.confirmation-message p {
+    margin-bottom: 0.75rem;
+}
+
+.confirmation-message strong {
+    font-weight: 600;
+    color: #8a45d9
+}
+
+.confirmation-message .warning-text {
+    color: #b91c1c;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.warning-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

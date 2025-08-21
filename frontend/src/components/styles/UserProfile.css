@@ -1,0 +1,14 @@
+/*
+ * @file UserProfile.css
+ * @description Styles for the UserProfile component
+ */
+
+
+.current-user .user-userName h2 {
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

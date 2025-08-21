@@ -1,0 +1,121 @@
+/*
+ * @file UserInfoSidebar.css
+ * @description Styles for the UserInfoSidebar component
+ */
+
+.user-info-sidebar {
+    padding: 20px;
+    color: #e4e4e4;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+.placeholder-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #7a7a7a;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px;
+    font-style: normal;
+}
+
+.user-profile-info {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.user-avatar.placeholder-info {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #2a2a2a, #1f1f1f);
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.user-name-info {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #e4e4e4;
+    font-weight: normal;
+}
+
+.user-status-info {
+    font-weight: 500;
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    font-style: normal;
+}
+
+.user-status-info.online {
+    color: #00cc66;
+}
+
+.user-status-info.offline {
+    color: #a0a0a0;
+}
+
+.user-details-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.user-details-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #af5fff;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.user-details-info .detail-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-details-info .detail-item strong {
+    margin-bottom: 5px;
+    color: #af5fff;
+    font-size: 0.9rem;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.user-details-info .detail-item span {
+    color: #e4e4e4;
+    font-size: 0.9rem;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.remove-friend-button{
+    display: flex;
+    justify-content: center;
+}
+
+.remove-friend-button button{
+    background: linear-gradient(90deg, #646cff, #af5fff);
+    color: white;
+    border-radius: 10px;
+    border-color: #8a45d9;
+    padding:6px 35px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

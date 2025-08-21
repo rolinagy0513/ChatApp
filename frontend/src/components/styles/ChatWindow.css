@@ -1,0 +1,231 @@
+/*
+ * @file ChatWindow.css
+ * @description Styles for the ChatWindow component
+ */
+
+
+.chat-area {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #0f0f0f;
+    color: #e4e4e4;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.chat-area.empty-chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f0f;
+}
+
+.user-avatar.placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.empty-chat-message {
+    text-align: center;
+    color: #a0a0a0;
+}
+
+.empty-chat-message h3 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.chat-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #2a2a2a;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+}
+
+.current-user {
+    display: flex;
+    align-items: center;
+}
+
+.recipient-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.recipient-info h3 {
+    margin: 0;
+    font-weight: 500;
+    color: #e4e4e4;
+}
+
+.messages-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #0f0f0f;
+    scrollbar-width: thin;
+    scrollbar-color: #646464 #0f0f0f;
+}
+
+.messages-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+    background: #0f0f0f;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+    background-color: #646464;
+    border-radius: 4px;
+}
+
+.message {
+    max-width: 70%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.message.received {
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+.message.sent {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.message-bubble {
+    padding: 12px 16px;
+    border-radius: 18px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.message.received .message-bubble {
+    background-color: #252525;
+    border-bottom-left-radius: 4px;
+}
+
+.message.sent .message-bubble {
+    background: linear-gradient(90deg, #646cff, #af5fff);
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.message-time {
+    font-size: 0.75rem;
+    color: #a0a0a0;
+}
+
+.message-input {
+    display: flex;
+    padding: 15px 20px;
+    border-top: 1px solid #2a2a2a;
+    background-color: #121212;
+}
+
+.message-input input {
+    flex-grow: 1;
+    padding: 12px 18px;
+    border-radius: 24px;
+    border: none;
+    background-color: #252525;
+    color: #e4e4e4;
+    font-size: 1rem;
+    outline: none;
+}
+
+.send-button {
+    background: linear-gradient(90deg, #646cff, #af5fff);
+    color: white;
+    border: none;
+    border-radius: 24px;
+    padding: 0 24px;
+    margin-left: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.send-button:hover {
+    background: linear-gradient(90deg, #4a52e0, #8a45d9);
+}
+
+.send-button:disabled {
+    background: #3a3a3a;
+    cursor: not-allowed;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2a2a2a;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.placeholder {
+    background: linear-gradient(45deg, #2a2a2a, #1f1f1f);
+}
+
+.connection-status {
+    font-size: 0.8em;
+    margin-left: auto;
+}
+
+.status-indicator.connected {
+    color: green;
+}
+
+.status-indicator.disconnected {
+    color: red;
+}
+
+.message.optimistic {
+    opacity: 0.7;
+}
+
+.sending-indicator {
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+    .chat-header {
+        padding: 10px 15px;
+    }
+
+    .recipient-info h3 {
+        display: none;
+    }
+
+    .message {
+        max-width: 85%;
+    }
+
+    .message-input {
+        padding: 10px 15px;
+    }
+
+    .message-input input {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,138 @@
+/*
+ * @file AuthForm.css
+ * @description Styles for the AuthForm component
+ */
+
+.auth-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.auth-form-element {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.auth-form-element > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-form-element input {
+    width: 90%;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #2d2d2d;
+    color: #f0f0f0;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.auth-form-element input:focus {
+    outline: none;
+    border-color: #646cff;
+    box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.2);
+}
+
+.auth-form-element button {
+    width: 90%;
+    padding: 1rem;
+    margin: 0 auto;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #646cff, #af5fff);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-form-element button:hover {
+    background: linear-gradient(90deg, #7a7df1, #b477ed)
+
+}
+
+.auth-form-element button:disabled {
+    background: #3a3a3a;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.auth-form-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.auth-form-checkbox input {
+    width: auto;
+    accent-color: #646cff;
+}
+
+.auth-form-text {
+    text-align: center;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    width: 100%;
+}
+
+.auth-form-text p {
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.auth-form-text p:hover {
+    color: #646cff;
+}
+
+.feedback-message {
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    min-height: 1.5rem;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .auth-form-container {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .auth-form-element {
+        gap: 1rem;
+    }
+
+    .auth-form-element input,
+    .auth-form-element button {
+        padding: 0.8rem;
+    }
+}

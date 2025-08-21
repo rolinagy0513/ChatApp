@@ -1,0 +1,213 @@
+/*
+ * @file NotificationsModal.css
+ * @description Styles for the NotificationsModal component
+ */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 1001;
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #121212;
+    width: min(90vw, 600px);
+    max-height: 80vh;
+    border-radius: 8px;
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2a2a2a;
+}
+
+.modal-header {
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.modal-header h1 {
+    color: #e4e4e4;
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.modal-close-button {
+    background: none;
+    border: none;
+    color: #e4e4e4;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.modal-close-button:hover {
+    color: #af5fff;
+}
+
+.modal-body {
+    padding: 1.25rem;
+    overflow-y: auto;
+}
+
+.results-container {
+    width: 100%;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.notification-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    border-bottom: 1px solid #2a2a2a;
+    align-items: center;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.user-avatar-notifications {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #646cff, #af5fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    flex-shrink: 0;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 60px;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.user-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e4e4e4;
+    margin: 0;
+}
+
+.request-time {
+    font-size: 0.8rem;
+    color: #a0a0a0;
+    margin: 4px 0 8px 0;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    align-items: center;
+    height: 100%;
+}
+
+.accept-btn, .decline-btn {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    min-width: 80px;
+}
+
+.accept-btn {
+    background: linear-gradient(135deg, #646cff, #af5fff);
+    color: white;
+}
+
+.accept-btn:hover {
+    background: linear-gradient(90deg, #4a52e0, #8a45d9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.decline-btn {
+    background: #3e3e3e;
+    color: #e4e4e4;
+}
+
+.decline-btn:hover {
+    background: #4e4e4e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.loading-indicator {
+    padding: 1.5rem;
+    text-align: center;
+    color: #a0a0a0;
+}
+
+.error-container {
+    padding: 1rem;
+    background-color: rgba(255, 0, 0, 0.1);
+    border-radius: 6px;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.error-message {
+    color: #ff6666;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.retry-button {
+    padding: 0.4rem 1rem;
+    background: #252525;
+    color: #e4e4e4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.retry-button:hover {
+    background: #2a2a2a;
+}
+
+.no-results {
+    text-align: center;
+    color: #a0a0a0;
+    padding: 1.5rem;
+    font-size: 0.95rem;
+}
+
+body.modal-open {
+    overflow: hidden;
+}

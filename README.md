@@ -33,14 +33,14 @@
 
   ## Requirements
 
-    ###Backend
+  Backend:
       - Java 21 or higher  
       - PostgreSQL database  
       - Maven
       - JavaScript and React with VITE 
       - IDE or code editor (IntelliJ, Eclipse, etc.)
    
-    ###Frontend
+  Frontend:
       - node 20.18.0
       - npm 10.8.2
       - stompJs 7.1.1

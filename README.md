@@ -33,14 +33,14 @@
 
   ## Requirements
 
-  Backend:
+    Backend:
       - Java 21 or higher  
       - PostgreSQL database  
       - Maven
       - JavaScript and React with VITE 
       - IDE or code editor (IntelliJ, Eclipse, etc.)
    
-  Frontend:
+    Frontend:
       - node 20.18.0
       - npm 10.8.2
       - stompJs 7.1.1
@@ -50,17 +50,17 @@
       - vite 6.3.5
 
   
-##Features
+  ##Features
 
-- HttpOnly cookie-based authentication system with multiple roles: USER, ADMIN, MANAGER.
-- Basic user search system to find potential friends.
-- Real-time friend requests via WebSockets (handled by FriendService), delivered through a personal queue to which the frontend subscribes.
-- Once a friendship is established, users are subscribed to each other’s queues and can receive live updates such as online/offline status.
-- Presence management is handled by a singleton in-memory PresenceService, which stores user statuses to avoid database-related performance issues. (Planned future migration to Redis.)
-- Messaging system that allows friends to exchange real-time messages through WebSocket queues.
-- Contact list feature where a user’s friends are displayed. Optimized with caching and asynchronous operations, and fully reactive: updates instantly when a friend is added or removed.
-- User info panel displaying friend details (name, email, status, friendsSince, etc.) with a "Remove Friend" option. Removal triggers a WebSocket event to update both sides’ contact lists automatically.
-- Responsive frontend design with structured fetching logic, WebSocket connection utilities, multiple contexts, reusable components, and proper routing.
+  - HttpOnly cookie-based authentication system with multiple roles: USER, ADMIN, MANAGER.
+  - Basic user search system to find potential friends.
+  - Real-time friend requests via WebSockets (handled by FriendService), delivered through a personal queue to which the frontend subscribes.
+  - Once a friendship is established, users are subscribed to each other’s queues and can receive live updates such as online/offline status.
+  - Presence management is handled by a singleton in-memory PresenceService, which stores user statuses to avoid database-related performance issues. (Planned future migration to Redis.)
+  - Messaging system that allows friends to exchange real-time messages through WebSocket queues.
+  - Contact list feature where a user’s friends are displayed. Optimized with caching and asynchronous operations, and fully reactive: updates instantly when a friend is added or removed.
+  - User info panel displaying friend details (name, email, status, friendsSince, etc.) with a "Remove Friend" option. Removal triggers a WebSocket event to update both sides’ contact lists automatically.
+  - Responsive frontend design with structured fetching logic, WebSocket connection utilities, multiple contexts, reusable components, and proper routing.
 
 
   ## Notes

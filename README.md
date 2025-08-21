@@ -61,6 +61,8 @@
   - Contact list feature where a user’s friends are displayed. Optimized with caching and asynchronous operations, and fully reactive: updates instantly when a friend is added or removed.
   - User info panel displaying friend details (name, email, status, friendsSince, etc.) with a "Remove Friend" option. Removal triggers a WebSocket event to update both sides’ contact lists automatically.
   - Responsive frontend design with structured fetching logic, WebSocket connection utilities, multiple contexts, reusable components, and proper routing.
+  - Unit tests for all services.
+  - Comprehensive documentation for most files and methods.
 
 
   ## Notes

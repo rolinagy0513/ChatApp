@@ -7,10 +7,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.retry.annotation.EnableRetry;
 import org.springframework.scheduling.annotation.EnableAsync;
 
-//Tesztek írása
-//GITHUB
-//Meg kell csinálni az Ecommerce api-t is
-
 @SpringBootApplication
 @EnableAsync
 @EnableCaching

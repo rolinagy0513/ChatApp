@@ -2,9 +2,6 @@ package org.example.chatapp.security.user;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.example.chatapp.model.ChatRoom;
-import org.example.chatapp.model.FriendShip;
-import org.example.chatapp.model.FriendRequest;
 import org.example.chatapp.security.token.Token;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,7 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "user")
+@Table(name = "_user")
 public class User implements UserDetails {
 
   @Id
@@ -29,7 +26,7 @@ public class User implements UserDetails {
           name = "users_generator",
           sequenceName = "users_id_seq",
           allocationSize = 1,
-          initialValue = 22
+          initialValue = 8
   )
   private Long id;
 
@@ -47,24 +44,6 @@ public class User implements UserDetails {
 
   @OneToMany(mappedBy = "user")
   private List<Token> tokens;
-
-  @OneToMany(mappedBy = "sender")
-  private List<ChatRoom> sentChatRooms;
-
-  @OneToMany(mappedBy = "recipient")
-  private List<ChatRoom> receivedChatRooms;
-
-  @OneToMany(mappedBy = "user1")
-  private List<FriendShip> friendshipsInitiated;
-
-  @OneToMany(mappedBy = "user2")
-  private List<FriendShip> friendshipsReceived;
-
-  @OneToMany(mappedBy = "sender")
-  private List<FriendRequest> sentFriendRequests;
-
-  @OneToMany(mappedBy = "recipient")
-  private List<FriendRequest> receivedFriendRequests;
 
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {

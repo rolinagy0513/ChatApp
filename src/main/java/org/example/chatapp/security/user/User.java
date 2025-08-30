@@ -20,11 +20,17 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "_user")
+@Table(name = "user")
 public class User implements UserDetails {
 
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_generator")
+  @SequenceGenerator(
+          name = "users_generator",
+          sequenceName = "users_id_seq",
+          allocationSize = 1,
+          initialValue = 22
+  )
   private Long id;
 
   private String firstname;
